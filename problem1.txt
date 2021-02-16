@@ -1,0 +1,77 @@
+//A Simple Hello World
+//console.log("Hello World");
+
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+inp.on("line", (data) => {
+  console.log(data)
+});
+var cat = {
+ name: "Fluffy",
+ activities: ["play", "eat cat food"],
+ catFriends: [
+ {
+ name: "bar",
+ activities: ["be grumpy", "eat bread omblet"],
+ weight: 8,
+ furcolor: "white"
+ }, 
+ {
+ name: "foo",
+ activities: ["sleep", "pre-sleep naps"],
+ weight: 3
+ }
+ ]
+}
+//adding height and weight to Fluffy
+cat.height="2feet";
+cat.weight=3,2;
+
+//updating name 
+cat.name="Fluffyy";
+
+//activites of fluffy's catfriend
+for(i in cat.catFriends)
+{
+    
+    console.log(cat.catFriends[i].activities);
+}
+//fluffyy's friends names
+for(i in cat.catFriends)
+{
+    console.log(cat.catFriends[i].name);
+}
+//total weight of cat friends
+var weight_of_catfriends=0;
+for(i in cat.catFriends)
+{
+    weight_of_catfriends=weight_of_catfriends+cat.catFriends[i].weight;
+}
+console.log(weight_of_catfriends);
+//total activites of all cats
+var total_activites=cat.activities.length;
+for(i in cat.catFriends)
+{
+    total_activites=total_activites+cat.catFriends[i].activities.length;
+}
+console.log(total_activites);
+//add 2 more activites
+for(i in cat.catFriends)
+{
+    cat.catFriends[i].activities.push("eating");
+}
+//chnaging the furcolor of bar
+cat.catFriends[0].furcolor="red";
+
+
+console.log(cat);
+
+
+
+output:
