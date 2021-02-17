@@ -1,0 +1,13 @@
+When you type a URL in the address bar of the browser the the browser checks for cache for DNS record to find the corresponding IP address.
+DNS(Domain Name System) is a database that has the URL and their IP address .To find the DNS record the browser check four caches.
+      1.first it checks browser cache which maintains a repository of DNS records for fixed duration for website which have previously visited.
+	  2.second the browser checks the OS cache. if it is not in the browser cache the system will call the underlyting  computer OS to fetch the record.
+	  3.tird it checks the router cache .if it is not on the computer the browser will communicate with the router that maintains it's own cache of DNS records.
+	  4.fourth it checks the ISP cache. if all steps fail the browser will move on to the ISP the ISP maintains it's own DNS server which includes a cache of DNS records which the browser would check.
+If the requested URL is not in the cache ISP's DNS server initiates a DNS query to find the IP adress of the server.
+Once the browser receives the correct IP adress it will build connection with the server that mathches the IP address to transfer information.The browser uses TCP to build the connection.As TCP is three-way handshake metos where the client and server exchanges synchronize and acknowled messages to establish connections.
+Once the TCP connection is established the browser sends HTTP request to the webserver.
+The server contains a webserver  that receives the request from the browser and passes it to a request handler to read and generate a response.
+The server sends out HTTP response.
+The browser displays the HTML content
+	  
