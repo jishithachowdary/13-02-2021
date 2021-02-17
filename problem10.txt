@@ -1,0 +1,70 @@
+//A Simple Hello World
+//console.log("Hello World");
+
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+inp.on("line", (data) => {
+  console.log(data)
+});
+var securityQuestions = [
+ {
+ question: "What was your first pet’s name?",
+ expectedAnswer: "FlufferNutter"
+ },
+ {
+ question: "What was the model year of your first car?",
+ expectedAnswer: "1985"
+ },
+ {
+ question: "What city were you born in?",
+ expectedAnswer: "NYC"
+ }
+]
+function chksecurityQuestions(securityQuestions,question,ans) {
+    let count=0;
+
+ for(i in securityQuestions)
+ {
+    if(securityQuestions[i].question==question && securityQuestions[i].expectedAnswer==ans)
+    count=count+1;
+ }
+ if(count!=0)
+ {
+    return true;
+ }
+ else
+ {
+     return false;
+ }
+}
+//Test case1:
+var ques = "What was your first pet’s name?";
+var ans  =  "FlufferNutter";
+var status = chksecurityQuestions(securityQuestions, ques, ans);
+console.log(status); // true
+//Test case2:
+var ques = "What was your first pet’s name?";
+var ans  =  "DufferNutter";
+var status = chksecurityQuestions(securityQuestions, ques, ans);
+console.log(status); // flase
+
+
+
+
+
+
+
+
+Output:
+true
+false
+Execution Time:
+0.076s
+Memory Used:
+8404kb

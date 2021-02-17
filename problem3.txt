@@ -1,0 +1,35 @@
+//A Simple Hello World
+//console.log("Hello World");
+
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+inp.on("line", (data) => {
+  console.log(data)
+});
+var obj = {name : "RajiniKanth", age : 33, hasPets : false};
+function printAllValues(obj) {
+ // your code here
+ let new_array=[]
+ for(i in obj)
+ {
+    new_array.push(obj[i]);
+ }
+ console.log(new_array);
+}
+printAllValues(obj);
+
+
+
+
+output:
+[ 'RajiniKanth', 33, false ]
+Execution Time:
+0.074s
+Memory Used:
+8464kb

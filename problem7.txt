@@ -1,0 +1,39 @@
+//A Simple Hello World
+//console.log("Hello World");
+
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+inp.on("line", (data) => {
+  console.log(data)
+});
+var arr = [["make", "Ford"], ["model", "Mustang"], ["year", 1964]];
+function fromListToObject(arr) {
+ var newObject = {};
+ for(i in arr)
+ {
+    let key=arr[i][0];
+    let value=arr[i][1];
+    newObject[key]=value;
+ }
+ return newObject;
+}
+
+console.log(fromListToObject(arr));
+
+
+
+
+
+
+Output:
+{ make: 'Ford', model: 'Mustang', year: 1964 }
+Execution Time:
+0.073s
+Memory Used:
+8392kb

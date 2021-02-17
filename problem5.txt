@@ -1,0 +1,39 @@
+//A Simple Hello World
+//console.log("Hello World");
+
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+inp.on("line", (data) => {
+  console.log(data)
+});
+var obj = {name: "ISRO", age: 35, role: "Scientist"};
+function convertListToObject(obj) {
+ // your code here
+ let new_array=[]
+ for(i in obj)
+ {
+    let new_sub_array=[];
+    new_sub_array.push(i);
+    new_sub_array.push(obj[i]);
+    new_array.push(new_sub_array);
+ }
+ console.log(new_array);
+}
+convertListToObject(obj);
+
+
+
+
+
+Output:
+[ [ 'name', 'ISRO' ], [ 'age', 35 ], [ 'role', 'Scientist' ] ]
+Execution Time:
+0.075s
+Memory Used:
+9452kb

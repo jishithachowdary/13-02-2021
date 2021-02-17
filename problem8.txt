@@ -1,0 +1,51 @@
+//A Simple Hello World
+//console.log("Hello World");
+
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+inp.on("line", (data) => {
+  console.log(data)
+});
+var arr= [[["firstName", "Vasanth"], ["lastName", "Raja"], ["age", 24], ["role", "JSWizard"]], [["firstName", "Sri"], ["lastName", "Devi"], ["age", 28], ["role", "Coder"]]];
+function transformEmployeeData(arr) {
+ var tranformEmployeeList = [];
+ for(i in arr)
+ {
+    var new_object={}; 
+    for(j in arr[i])
+    {
+        let key=arr[i][j][0];
+        let value=arr[i][j][1];
+        new_object[key]=value;
+    }
+    tranformEmployeeList.push(new_object);
+ }
+ 
+ return tranformEmployeeList;
+}
+console.log(transformEmployeeData(arr));
+
+
+
+
+
+
+
+
+
+Output:
+[ { firstName: 'Vasanth',
+    lastName: 'Raja',
+    age: 24,
+    role: 'JSWizard' },
+  { firstName: 'Sri', lastName: 'Devi', age: 28, role: 'Coder' } ]
+Execution Time:
+0.074s
+Memory Used:
+8400kb

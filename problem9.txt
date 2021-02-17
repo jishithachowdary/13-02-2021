@@ -1,0 +1,94 @@
+//A Simple Hello World
+//console.log("Hello World");
+
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+inp.on("line", (data) => {
+  console.log(data)
+});
+var expected = {foo: 5, bar: 6};
+var actual = {foo: 5, bar: 6}
+function assertObjectsEqual(actual, expected, testName){
+ // your code here
+ let actual1=JSON.stringify(actual);
+ let expected1=JSON.stringify(expected);
+ if(actual1==expected1)
+ {
+     console.log("Passed")
+ }
+ else
+ {
+     console.log("FAILED"+testName+actual1+"but got"+expected1);
+ }
+}
+assertObjectsEqual(actual,expected,"mytest");
+
+
+
+
+
+
+Output:
+Passed
+Execution Time:
+0.072s
+Memory Used:
+8352kb
+
+
+
+
+//for failure
+//A Simple Hello World
+//console.log("Hello World");
+
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+inp.on("line", (data) => {
+  console.log(data)
+});
+var expected = {foo: 6, bar: 5};
+var actual = {foo: 5, bar: 6}
+function assertObjectsEqual(actual, expected, testName){
+ // your code here
+ let actual1=JSON.stringify(actual);
+ let expected1=JSON.stringify(expected);
+ if(actual1==expected1)
+ {
+     console.log("Passed")
+ }
+ else
+ {
+     console.log("FAILED"+testName+actual1+"but got"+expected1);
+ }
+}
+assertObjectsEqual(actual,expected,"mytest");
+
+
+
+
+
+
+
+
+
+
+
+Output:
+FAILEDmytest{"foo":5,"bar":6}but got{"foo":6,"bar":5}
+Execution Time:
+0.071s
+Memory Used:
+8428kb

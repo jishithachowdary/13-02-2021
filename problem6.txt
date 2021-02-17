@@ -1,0 +1,35 @@
+//A Simple Hello World
+//console.log("Hello World");
+
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+inp.on("line", (data) => {
+  console.log(data)
+});
+var arr = ["GUVI", "I", "am", "geek"];
+function transformFirstAndLast(arr) {
+    let newObject={};
+    let key=arr[0];
+    newObject[key]=arr[arr.length-1];
+    return newObject;
+}
+console.log(transformFirstAndLast(arr))
+
+
+
+
+
+
+
+Output:
+{ GUVI: 'geek' }
+Execution Time:
+0.076s
+Memory Used:
+8388kb
