@@ -74,4 +74,21 @@ console.log(cat);
 
 
 
-output:
+Output:
+[ 'be grumpy', 'eat bread omblet' ]
+[ 'sleep', 'pre-sleep naps' ]
+bar
+foo
+11
+6
+{ name: 'Fluffyy',
+  activities: [ 'play', 'eat cat food' ],
+  catFriends: 
+   [ { name: 'bar', activities: [Array], weight: 8, furcolor: 'red' },
+     { name: 'foo', activities: [Array], weight: 3 } ],
+  height: '2feet',
+  weight: 3 }
+Execution Time:
+0.077s
+Memory Used:
+8528kb
