@@ -1,0 +1,70 @@
+//A Simple Hello World
+//console.log("Hello World");
+
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+inp.on("line", (data) => {
+  console.log(data)
+});
+var myCar = {
+ make: "Bugatti",
+ model: "Bugatti La Voiture Noire",
+ year: 2019,
+ accidents: [
+ {
+ date: "3/15/2019",
+ damage_points: "5000",
+ atFaultForAccident: true
+ },
+ {
+ date: "7/4/2022",
+ damage_points: "2200",
+ atFaultForAccident: true
+ },
+ {
+ date: "6/22/2021",
+ damage_points: "7900",
+ atFaultForAccident: true
+ }
+ ]
+}
+//changing the fault for accident from truw to false
+for(i in myCar.accidents)
+{
+    myCar.accidents[i].atFaultForAccident=false;
+}
+
+//print date of the accident
+for(i in myCar.accidents)
+{
+    console.log(myCar.accidents[i].date);
+}
+console.log(myCar);
+
+output:
+3/15/2019
+7/4/2022
+6/22/2021
+{ make: 'Bugatti',
+  model: 'Bugatti La Voiture Noire',
+  year: 2019,
+  accidents: 
+   [ { date: '3/15/2019',
+       damage_points: '5000',
+       atFaultForAccident: false },
+     { date: '7/4/2022',
+       damage_points: '2200',
+       atFaultForAccident: false },
+     { date: '6/22/2021',
+       damage_points: '7900',
+       atFaultForAccident: false } ] }
+Execution Time:
+0.074s
+Memory Used:
+8516kb
