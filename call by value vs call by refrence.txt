@@ -1,0 +1,27 @@
+copy by value:-
+In a primitive data type when a variable is assigned to a value memory is created with the variable name.
+if another variable is created and firts variable is assigned to the variable another memory is created for the second variable in which the value assigned to the first variable is stored.
+if the second variable value is changed it does not effect the first variable value as the firat variable and second variable use different memmory.
+for example:
+var a=10;
+var b=a;
+b=20;
+
+in this case intially(i.e., line1) a is assigned to 10 so one memory space is created for a in which 10 is stored.
+when the line 2 is excuted b is assigned to the value of a where one more memory is created separetly .
+when line 3 is excuted the b values is alone change it doesnot change a value as those both variables use differnt memory spaces,
+
+
+
+
+call by reference:-
+In case of a non-primitive dat type (i.e., composite data type) when a value is assigned to a variable memory is created .
+if another variable is created to which first variable is assigned the the second variable also refers to memory space which was created by first variable.
+so if changes are made in second those changes are reflected in the first variable as the both variables refers to same memory.
+for example:
+let a={name:"jishi"};
+let b=a;
+b.name="chowdary";
+when line 1 is excuteda memory space is created which is assigned to variable a;
+when line 2 is excuted varibale b alos refers to same memmory which is assigned to a .
+when line 3 excuted the change  happens in a as both variables share the same memory.
