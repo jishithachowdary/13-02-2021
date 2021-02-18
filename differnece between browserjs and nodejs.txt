@@ -1,0 +1,5 @@
+1.Browser.js is mainly used for client -side application like validations on a webpage or dynamic place as it gets excuted in the browser while Node.js javascript code gets excuted otside the browser aas it is interpretor and used in server -sdie applications.
+2.Node.js has full system access i.e can read and write directly to the file system like any other application that also concludes that we can write complete software using Node.js while Browser.js is sandboxed for the safety purposes and have access limited to the browser.
+3.Browser.js runs any engine like Spider monkey (Firefox), JavaScript Core (Safari), V8 (Google Chrome) accordingly to the browser while Node.js runs in a V8 engine which is mainly used by google chrome.
+4.In Node.js everything is a module i.e it is mandatory to keep everything inside a module while moduling is not mandatory for browser javascript.
+5.Node.js is headless i.e without any GUI while Bowsers are not headless.

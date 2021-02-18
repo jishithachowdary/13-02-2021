@@ -1,0 +1,8 @@
+prioritization:
+HTTP/2.0 uses prioritization i.e it prioritize the content while loading so, the most important content to the user is loaded first which makes the user perceive that the page is loading faster, even the developer has the authority to give weighted priority and decide in what order the content on the page should get loaded.
+multiplexing:
+HTTP/1.1 loads resources one after the other, so if one resource cannot be loaded, it blocks all the other resources behind it. In contrast, HTTP/2 is able to use a single TCP connection to send multiple streams of data at once so that no one resource blocks any other resource.
+server push:
+HTTP/2.0 allows a server to “push” content to a client before the client asks for it while for HTTP/1.0 a server only serves content to a client device if the client asks for it, now this may sound like unnecessary overhead work in HTTP/2.0 however the content pushed without requesting is the content which client must request.
+header compression:
+Both HTTP/1.1 and HTTP/2 compress HTTP messages to make them smaller. However, HTTP/2 uses a more advanced compression method called HPACK that eliminates redundant information in HTTP header packets making the packets smaller in size resulting in faster loading of data.
